@@ -22,7 +22,7 @@ a.post {
 		<tr>
 			<td>1</td>
 			<td><span class="label label-danger">진행중</span></td>
-			<td><a class="post" href="#">여기는 제목1~~~</a></td>
+			<td><a class="post" href="${pageContext.request.contextPath}/dispatcher?command=ReadPostInfo&pno=1">여기는 제목1~~~</a></td>
 			<td>테스트1</td>
 			<td>2018.03.19</td>
 		</tr>
@@ -79,7 +79,7 @@ a.post {
 	<ul class="pagination pagination">
 		<li><a href="#">«</a></li>
 		<li class="active"><a href="#">1</a></li>
-		<li><a href="#">2</a></li>
+		<li><a href="">2</a></li>
 		<li><a href="#">3</a></li>
 		<li><a href="#">4</a></li>
 		<li><a href="#">5</a></li>

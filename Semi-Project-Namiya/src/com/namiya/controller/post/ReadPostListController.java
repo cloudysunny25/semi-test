@@ -21,7 +21,8 @@ public class ReadPostListController implements Controller {
 		PagingBean pagingBean=null;
 		ArrayList<NamiyaPostVO> list=NamiyaDAO.getInstance().readPostList(pagingBean);
 		ListVO vo=new ListVO(list, pagingBean);
-		return null;
+		request.setAttribute("url", "/post/readPostList.jsp");
+		return "home.jsp";
 	}
 
 }

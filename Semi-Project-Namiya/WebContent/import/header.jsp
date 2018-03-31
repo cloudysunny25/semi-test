@@ -18,7 +18,7 @@
 		
 		<!-- 헤더 메뉴설정 -->
 		<ul class="nav navbar-nav">
-			<li><a href="#"><i class="fas fa-home"></i> Home</a></li> 
+			<li><a href="index.jsp"><i class="fas fa-home"></i> Home</a></li> 
 			<!-- <li class="active"><a href="#">Link</a></li> -->
 		</ul> <!-- nav navbar-nav -->
 		

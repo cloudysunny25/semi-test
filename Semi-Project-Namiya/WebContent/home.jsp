@@ -51,10 +51,10 @@
 			</div> <!-- col-sm-offset-1 col-sm-9 text-center -->
 		</div> <!-- row img -->
 		
-		<!-- 메인 게시판 -->
+		<!-- 메인화면 -->
 		<div class="row main">
 			<div class="col-sm-offset-2 col-sm-8">
-				<c:import url="post/readPostList.jsp"/>
+				<c:import url="${url}"/>
 			</div> <!-- col-sm-offset-2 col-sm-8 -->
 		</div> <!-- row main -->
 		

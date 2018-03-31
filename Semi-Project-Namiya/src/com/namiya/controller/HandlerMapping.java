@@ -53,6 +53,8 @@ public class HandlerMapping {
 			c=new ReadPostInfoController();
 		}else if(command.equals("ReadReply")) {
 			c=new ReadReplyController();
+		}else if(command.equals("UpdatePostView")) {
+			c=new UpdatePostViewController();
 		}else if(command.equals("UpdatePost")) {
 			c=new UpdatePostController();
 		}else if(command.equals("UpdateReply")) {

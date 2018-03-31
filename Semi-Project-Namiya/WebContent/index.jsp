@@ -9,6 +9,9 @@
 <title>남이야 잡화점</title>
 </head>
 <body>
-<jsp:forward page="home.jsp"/>
+<!-- 홈 화면 main에서 게시물 목록을 보여줄 수 있도록 ReadPostList Controller로 이동 -->
+ <jsp:forward page="dispatcher">
+ 	<jsp:param value="ReadPostList" name="command"/>
+ </jsp:forward>
 </body>
 </html>

@@ -57,9 +57,33 @@ public class NamiyaDAO {
 	}//method
 
 	//전달받은 글번호에 맞는 글의 내용을 반환하는 메서드
-	public NamiyaPostVO readPostInfo(int pno) {
-		// TODO Auto-generated method stub
-		return null;
+	public NamiyaPostVO readPostInfo(int pno) throws SQLException {
+		NamiyaPostVO vo = null;
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			con = dataSource.getConnection();
+			String sql = "SELECT p_title, p_content, p_date, p_lock, reply, u.id, u.nickname " + 
+					"FROM namiya_user u, namiya_post p " + 
+					"WHERE u.id = p.id";
+			pstmt = con.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				vo = new NamiyaPostVO();
+				vo.setpNo(pno);
+				vo.setpTitle(rs.getString(1));
+				vo.setpContent(rs.getString(2));
+				vo.setpDate(rs.getString(3));
+				vo.setLock(rs.getString(4));
+				vo.setReply(rs.getInt(5));
+				vo.setUserVO(new NamiyaUserVO(rs.getString(6), rs.getString(7), null));
+			}
+			
+		}finally {
+			closeAll(rs, pstmt, con);
+		}
+		return vo;
 	}//method
 	
 	//전달받은 글번호에 맞는 답변의 내용을 반환하는 메서드
